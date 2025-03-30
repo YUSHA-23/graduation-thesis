@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>卒業論文（閲覧限定）</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    .page-container {
+      display: none;
+    }
+    img {
+      width: 80%;
+      margin-bottom: 30px;
+      user-select: none;
+      pointer-events: none;
+    }
+    input[type="password"] {
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.onkeydown = function(e) {
+      if ((e.ctrlKey || e.metaKey) && ['s', 'u', 'p'].includes(e.key.toLowerCase())) {
+        e.preventDefault();
+      }
+    };
+    function checkPassword() {
+      const input = document.getElementById('pw').value;
+      if (input === 'YuTanaka26') {
+        document.getElementById('auth').style.display = 'none';
+        document.getElementById('pages').style.display = 'block';
+      } else {
+        alert('パスワードが違います');
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="auth">
+    <h1>卒業論文 閲覧ページ</h1>
+    <p>パスワードを入力してください</p>
+    <input type="password" id="pw" />
+    <br>
+    <button onclick="checkPassword()">閲覧する</button>
+  </div>
+
+  <div id="pages" class="page-container">
+    <img src="thesis-01.jpg" alt="Page 1">
+    <img src="thesis-02.jpg" alt="Page 2">
+    <img src="thesis-03.jpg" alt="Page 3">
+    <img src="thesis-04.jpg" alt="Page 4">
+    <img src="thesis-05.jpg" alt="Page 5">
+    <img src="thesis-06.jpg" alt="Page 6">
+    <img src="thesis-07.jpg" alt="Page 7">
+    <img src="thesis-08.jpg" alt="Page 8">
+    <img src="thesis-09.jpg" alt="Page 9">
+    <img src="thesis-10.jpg" alt="Page 10">
+    <img src="thesis-11.jpg" alt="Page 11">
+    <img src="thesis-12.jpg" alt="Page 12">
+    <img src="thesis-13.jpg" alt="Page 13">
+    <img src="thesis-14.jpg" alt="Page 14">
+    <img src="thesis-15.jpg" alt="Page 15">
+    <img src="thesis-16.jpg" alt="Page 16">
+    <img src="thesis-17.jpg" alt="Page 17">
+    <img src="thesis-18.jpg" alt="Page 18">
+    <img src="thesis-19.jpg" alt="Page 19">
+    <img src="thesis-20.jpg" alt="Page 20">
+    <img src="thesis-21.jpg" alt="Page 21">
+    <img src="thesis-22.jpg" alt="Page 22">
+    <img src="thesis-23.jpg" alt="Page 23">
+    <img src="thesis-24.jpg" alt="Page 24">
+    <img src="thesis-25.jpg" alt="Page 25">
+    <img src="thesis-26.jpg" alt="Page 26">
+    <img src="thesis-27.jpg" alt="Page 27">
+    <img src="thesis-28.jpg" alt="Page 28">
+    <img src="thesis-29.jpg" alt="Page 29">
+    <img src="thesis-30.jpg" alt="Page 30">
+    <img src="thesis-31.jpg" alt="Page 31">
+    <img src="thesis-32.jpg" alt="Page 32">
+    <img src="thesis-33.jpg" alt="Page 33">
+    <img src="thesis-34.jpg" alt="Page 34">
+    <img src="thesis-35.jpg" alt="Page 35">
+    <img src="thesis-36.jpg" alt="Page 36">
+    <img src="thesis-37.jpg" alt="Page 37">
+    <img src="thesis-38.jpg" alt="Page 38">
+    <img src="thesis-39.jpg" alt="Page 39">
+    <img src="thesis-40.jpg" alt="Page 40">
+    <img src="thesis-41.jpg" alt="Page 41">
+    <img src="thesis-42.jpg" alt="Page 42">
+  </div>
+</body>
+</html>
